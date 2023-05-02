@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3695BDEF-A04B-4D6D-8873-83591054BBB5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Combat</RootNamespace>
+    <AssemblyName>Combat</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppACTk.Examples.Genuine.Runtime">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppACTk.Examples.Genuine.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppACTk.Examples.Runtime">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppACTk.Examples.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppACTk.Runtime">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppACTk.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppAdl.LZ4">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppAdl.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppAimAssistAssembly">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppAimAssistAssembly.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppAppleAuth">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppAppleAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppAstarPathfindingProject">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppAstarPathfindingProject.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppBeebyteObfuscator">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppBeebyteObfuscator.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppbolt">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2Cppbolt.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppbolt.user">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2Cppbolt.user.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppcom.rlabrecque.steamworks.net">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2Cppcom.rlabrecque.steamworks.net.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppCorgiFogGradient">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppCorgiFogGradient.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppDelaunayER">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppDelaunayER.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppDest.Math">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppDest.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppDOTween">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppDOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppDOTween.Modules">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppDOTween.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppDualSenseForUnity">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppDualSenseForUnity.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppEasyRoads3Dv3">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppEasyRoads3Dv3.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppEnhancedScroller">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppEnhancedScroller.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppEnhancedScroller.Demos">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppEnhancedScroller.Demos.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppFacebook.Unity">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppFacebook.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppFacebook.Unity.Settings">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppFacebook.Unity.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppFlexy.AssetBundles">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppFlexy.AssetBundles.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppFlexy.Audio">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppFlexy.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppFlexy.Binding">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppFlexy.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppFlexy.UI">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppFlexy.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppFlexy.Utils">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppFlexy.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppFlexy.Utils.Unity">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppFlexy.Utils.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppGPUInstancer">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppGPUInstancer.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Common">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\net6\Il2CppInterop.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Generator">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\net6\Il2CppInterop.Generator.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppJustAssets.TerrainUtility">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppJustAssets.TerrainUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppMobileVibration">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppMobileVibration.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppMono.Security">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppMono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppNewtonsoft.Json">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppNewtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppPathfinding.ClipperLib">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppPathfinding.ClipperLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppPathfinding.Ionic.Zip.Reduced">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppPathfinding.Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppPathfinding.Poly2Tri">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppPathfinding.Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppPhoton3Unity3D">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppPhoton3Unity3D.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppPhotonBolt">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppPhotonBolt.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppPhotonChat">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppPhotonChat.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppPhotonRealtime">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppPhotonRealtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppPlayFab">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppPlayFab.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppPurchasing.Common">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppPurchasing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppRadialBlur">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppRadialBlur.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppStompyRobot.SRF">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppStompyRobot.SRF.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppudpkit">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2Cppudpkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppudpkit.common">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2Cppudpkit.common.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppudpkit.platform.dotnet">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2Cppudpkit.platform.dotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppudpkit.platform.null">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2Cppudpkit.platform.null.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppudpkit.platform.photon">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2Cppudpkit.platform.photon.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppUniTask">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppUniTask.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppUniTask.DOTween">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppUniTask.DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppXInputDotNetPure">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppXInputDotNetPure.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppYoutubePlayer">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppYoutubePlayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppZString">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2CppZString.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cpp_CombatMaster">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2Cpp_CombatMaster.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cpp_CombatMaster.Battle">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2Cpp_CombatMaster.Battle.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cpp_CombatMaster.Boot">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2Cpp_CombatMaster.Boot.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cpp_CombatMaster.Client">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2Cpp_CombatMaster.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cpp_CombatMaster.GDI">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2Cpp_CombatMaster.GDI.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cpp_CombatMaster.View">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Il2Cpp_CombatMaster.View.dll</HintPath>
+    </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\net6\MelonLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="Unity.Burst">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Analytics">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.Services.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.Services.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Configuration">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Device">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Device.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Environments.Internal">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Environments.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Internal">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Registration">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Registration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Scheduler">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Scheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Telemetry">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Telemetry.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Threading">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.GIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.NVIDIAModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.NVIDIAModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.AppleCore">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.Purchasing.AppleCore.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.AppleMacosStub">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.AppleStub">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.Purchasing.AppleStub.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.SecurityCore">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.SecurityStub">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.Purchasing.SecurityStub.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.Stores">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.WinRTCore">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.Purchasing.WinRTCore.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.WinRTStub">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.Purchasing.WinRTStub.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsNativeModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.UIElementsNativeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.UnityCurlModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.VirtualTexturingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Combat Master\MelonLoader\Il2CppAssemblies\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Damage.cs" />
+    <Compile Include="Ammo.cs" />
+    <Compile Include="CheatToggles.cs" />
+    <Compile Include="Drawing.cs" />
+    <Compile Include="Emblems.cs" />
+    <Compile Include="ESP.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="MatchXP.cs" />
+    <Compile Include="Menus\InGameMenu.cs" />
+    <Compile Include="Operators.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BattlePass.cs" />
+    <Compile Include="Weapons.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
