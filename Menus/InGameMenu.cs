@@ -25,25 +25,11 @@ namespace Combat.Menus
             coolButtonStyle.active.background = Texture2D.whiteTexture;
             coolButtonStyle.border = new RectOffset(10, 10, 10, 10);
 
-            if (!showCheatScreen)
-            {
-                RenderMainMenu(coolButtonStyle);
-            }
-            else if (showCheatScreen)
-            {
-                RenderCheatScreen();
-            }
-
             GUI.DragWindow(new Rect(0f, 0f, 10000f, 20f));
         }
 
         public static void RenderMainMenu(GUIStyle coolButtonStyle)
         {
-
-            if (GUI.Button(new Rect(20f, 57f, 130f, 25f), new GUIContent("Cheats"), coolButtonStyle))
-            {
-                showCheatScreen = true;
-            }
         }
 
         public static void RenderCheatScreen()
@@ -59,13 +45,11 @@ namespace Combat.Menus
 
             if (GUI.Button(new Rect(160f, 155f, 130f, 25f), new GUIContent($"{(CheatToggles.IsOPUnlocked ? "" : "")} Unlock Operators"), coolButtonStyle))
             {
-                CheatToggles.IsOPUnlocked = !CheatToggles.IsOPUnlocked;
                 Operator.Toggle(CheatToggles.IsOPUnlocked);
             }
 
             if (GUI.Button(new Rect(160f, 185f, 130f, 25f), new GUIContent($"{(CheatToggles.IsWeaponUnlocked ? "" : "")} Unlock Blueprints"), coolButtonStyle))
             {
-                CheatToggles.IsWeaponUnlocked = !CheatToggles.IsWeaponUnlocked;
                 Weapons.Toggle(CheatToggles.IsWeaponUnlocked);
             }
 
@@ -81,13 +65,11 @@ namespace Combat.Menus
 
             if (GUI.Button(new Rect(160f, 275f, 130f, 25f), new GUIContent($"{(CheatToggles.IsEmblemLocked ? "" : "")} Unlock Emblems"), coolButtonStyle))
             {
-                CheatToggles.IsEmblemLocked = !CheatToggles.IsEmblemLocked;
                 Emblems.Toggle(CheatToggles.IsEmblemLocked);
             }
 
             if (GUI.Button(new Rect(160f, 305f, 130f, 25f), new GUIContent($"{(CheatToggles.XP ? "" : "")} Match XP"), coolButtonStyle))
             {
-                CheatToggles.XP = !CheatToggles.XP;
                 XP.ToggleXP(CheatToggles.XP);
             }
 
